@@ -18,7 +18,7 @@ jobs:
           echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u ${{ secrets.DOCKER_HUB_USER}} --password-stdin
       
       - name: Build da imagem
-        run: docker build -t LucasPepper/supermario:${{ github.run_id }} .
+        run: docker build -t primodebre/supermario:${{ github.run_id }} .
 
       - name: Push da imagem para o Docker Hub
-        run: docker push LucasPepper/supermario:${{ github.run_id }} 
+        run: docker push primodebre/supermario:${{ github.run_id }} 
